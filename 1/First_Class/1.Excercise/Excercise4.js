@@ -62,7 +62,11 @@ const lettersExpanded = ["a","b","c", "d", "e", "f", "g", "h"];
 
 // log every second char in the array starting from b
 
-
+for (let index = 1; index < lettersExpanded.length; index++) {
+    if(index % 2 != 0){
+        console.log(lettersExpanded[index]);
+    }
+}
 
 // --------------------------------------
 // Exercise 8 - For loop and if statement
@@ -73,6 +77,12 @@ const discardedNumbers = [];
 
 // log the element if the number is above 6 or below 0
 // else push them to the array discardedNumbers
+for (let i = 0; i < numbers.length; i++) {
+    if(numbers[i] > 6 || numbers[i] < 0){
+        discardedNumbers.push(numbers[i]);
+    }
+}
+console.log(discardedNumbers)
 
 // --------------------------------------
 

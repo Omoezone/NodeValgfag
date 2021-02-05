@@ -21,7 +21,8 @@ const willObject = {name:"William",age:21};
 const stackOverflow = {}; 
 
 // make a rule called isAllowed and let the value be true
-
+stackOverflow.isAllowed = true;
+console.log(stackOverflow);
 // --------------------------------------
 // Exercise 4 - Remove a property 
 
