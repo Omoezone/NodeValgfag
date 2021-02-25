@@ -22,6 +22,14 @@ app.get("/month", (req, res) => {
     res.send({ month });
 });
 
+app.get("/about", (req, res) => {
+    res.send({Version: "1.0.2"});
+});
+
+app.get("/page", (req, res) => {
+    res.send("<h1>HELLO</h1>");
+});
+
 // Translate the integer value recieved from date.get functions, into name of the day or month
 function nameOfValue(value){
     let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
