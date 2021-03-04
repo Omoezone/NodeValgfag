@@ -35,3 +35,24 @@ Array:
 
     const arrayNumber = [1,2,3,4,5,6,7,8,9];
     console.log(arrayNumber[4])
+
+
+
+
+-----
+CALLBACKS
+
+Errors er objects¨
+
+Undefined er ikke et true value, ligesom false, 0 osv.
+
+const value = require("./filenameOfJSON"); // If no ./ it will look in node_modules
+
+PUT and PATCH: 
+    put replaces the entire resource
+    patch replace part of the rescource
+ 
+
+ Mandatory: 
+
+    

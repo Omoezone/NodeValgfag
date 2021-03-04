@@ -3,14 +3,17 @@ const app = express()
 
 app.use(express.json());
 const dataArray = new Array();
-
+const wine = require("./wine.json")
 
 // GET 
 app.get('/', function (req, res) {
     console.log(dataArray);
   res.send("<h1>Front Page</h1>");
 })
-
+// Get wine
+app.get('/wine', (req, res) => {
+  res.send(wine);
+});
 // POST
 app.post("/data", (req, res) => {
     console.log(req.body);
@@ -39,4 +42,10 @@ app.delete("/data", (req,res) => {
     console.log(dataArray);
 });
 
-app.listen(8080)
+
+app.listen(8080, (error) => {
+    if(error) {
+        console.log(error);
+    }
+    console.log("Server is running on port", 8080);
+});
