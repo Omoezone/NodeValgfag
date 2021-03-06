@@ -6,4 +6,11 @@ app.get("/", (req, res) => {
 });
 
 
-app.listen(8080);
+
+app.listen(8080, (error) => {
+    if(error){
+        console.log("The program experienced an error" + error);
+    }else {
+        console.log("Starting program on port: ", 8080);
+    }
+});
