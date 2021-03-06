@@ -5,8 +5,15 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + '/views/frontPage.html');
 });
 
-
-
+app.post("/basic", (req, res) =>{
+    res.sendFile(__dirname + '/views/basic.html');
+});
+app.post("/expressTerminal", (req, res) =>{
+    res.sendFile(__dirname + '/views/expressTer.html');
+});
+app.post("/focusedTopic", (req, res) =>{
+    res.sendFile(__dirname + '/views/focusedTop.html');
+});
 app.listen(8080, (error) => {
     if(error){
         console.log("The program experienced an error" + error);
