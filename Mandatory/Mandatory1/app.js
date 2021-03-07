@@ -5,13 +5,15 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + '/views/frontPage.html');
 });
 
-app.post("/basic", (req, res) =>{
+app.get("/basic", (req, res) =>{
     res.sendFile(__dirname + '/views/basic.html');
 });
-app.post("/expressTerminal", (req, res) =>{
+
+app.get("/expressTerminal", (req, res) =>{
     res.sendFile(__dirname + '/views/expressTer.html');
 });
-app.post("/focusedTopic", (req, res) =>{
+
+app.get("/focusedTopic", (req, res) =>{
     res.sendFile(__dirname + '/views/focusedTop.html');
 });
 app.listen(8080, (error) => {
