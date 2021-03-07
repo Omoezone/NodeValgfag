@@ -6,8 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <title>Document</title>
+    <style>
+        pre{
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+        }
+        dt{
+            text-align: left;
+        }
+        dd{
+            text-align: left;
+        }
+    </style>
 </head>
-<body style="background-color: rgba(27, 134, 116, 0.651);">
+<body style="background-color: rgba(36, 72, 88, 0.651);">
     <!-- This next nav is the navigation bar at the top of each page (inspiration from bootstrap)-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -27,6 +41,26 @@
     <h1 style="text-align: center;">Express and the terminal</h1>
     <pre style="text-align: center;">We will on this page demonstrate how we work with the <i>terminal</i>
 as we use the different tools in our toolbelts, such as <b>git commands</b> and <b>npm</b>.
-Then will we look at <i>express</i> and how we ready an <i>express</i> projects.</pre>
+Then will we look at <i>express</i> and how we ready an <i>express</i> projects.</pre><br>
+
+<h1 style="text-align: center;"><u>Express</u></h1><br>
+<div style="margin: auto; width:75%; display:flex;">
+    <pre>Before we begin using express in Node, will we have to do some things first:
+        <dl>
+            <dt>1. Create a project folder</dt>
+            <dt>2. Create a package.json file (create dependencies)</dt>
+            <dd>- Create a new file and name it (name).json. Then we new to ensure that we actually make it a Json by using the "{}". 
+We are now ready to declare the <i>dependencies</i> for the project. When we do that, should we remember to think "key & values". 
+First we need the key which is <i>"dependencies":</i> and the value is what is inside the "{}". Inside of those, will we have a new key & value pair. 
+As we are wanting to work with express, will the next key be <i>"express":</i> and the value will be the version of the key (express) we will be running. 
+            </dd>
+            <dt>3. Install express for our project with <i>npm install</i></dt>
+            <dt>4. Tell NodeJS that we want to use express (require)</dt>
+            <dt>5. Create a listen callback</dt>
+        </dl>
+    </pre>
+</div>
+
+
 </body>
 </html>
