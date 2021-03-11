@@ -8,23 +8,82 @@
     <title>Basic NodeJS</title>
 </head>
 <body style="background-color: rgba(36, 72, 88, 0.651);">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/">Home</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="/basic">Basic NodeJS</a>
-              <a class="nav-link" href="/expressTerminal">Express & Terminal</a>
-              <a class="nav-link" href="/focusedTopic">Own topic</a>
-            </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="/basic">Basic NodeJS</a>
+            <a class="nav-link" href="/expressTerminal">Express & Terminal</a>
+            <a class="nav-link" href="/focusedTopic">Own topic</a>
           </div>
         </div>
-      </nav><br>
-    <h1 style="text-align: center;">BASIC PAGE</h1>
-    <pre style="text-align: center;">This page is for the basic principles of NodeJS, such as arrays, JSON and variables
+      </div>
+    </nav><br>
+  <h1 style="text-align: center;">BASIC PAGE</h1>
+  <pre style="text-align: center;">This page is for the basic principles of NodeJS, such as arrays, JSON and variables
     The point is to give a simple and clear explaniation of the subjects with understandable examples.</pre><br>
+  <div style="margin: auto; width:75%; display:flex;">
+    <pre>
+        <dl>
+          <dt><h5>Variables</h5></dt><dd>Variables in NodeJS has the same functions as in most other languages. It is an container that hold values.
+We use 3 different kind of variables. <i>Var</i>, <i>let</i> and <i>const</i>. We will distinguish between mutable and imutalbe variables.
+A mutable variable is one, that can be modified after it is created, where an imutable can not. 
+
+<b>> var & let:</b> Both are mutable and is much alike with some differences. The main difference is the scope of the variables. 
+Var has it scope to functions, while let has block scope ie. to enclosing brackets ("{}"). Example: 
+
+            function run() {
+              var foo = "Foo";
+              let bar = "Bar";
+            
+              console.log(foo, bar); // Foo Bar
+              {
+                var moo = "Mooo"
+                let baz = "Bazz";
+                console.log(moo, baz); // Mooo Bazz
+              }
+              console.log(moo); // Mooo
+              console.log(baz); // ReferenceError
+            }
+            run();
+
+Here is the var scoped to the entire function, where let is only usable inside the enclosing brackets. 
+So the var in the middle ("Mooo") is used outside of the enclosing brackets as it log it in the end, with no problems
+as it is still inside of the function <i>run()</i>, but it throws an error for the let, as the console log
+for the let ("Bazz") is outside of the <i>scope</i> of the enclosing brackets ("{}").
+
+<b>> Const:</b> Is an imutable variable. Const works a lot like <i>let</i> which we have just talked about, with the 
+exception that it cant be changed after it has been created. That it works like <i>let</i> means that it also has block scope.
+Same example as above can be used with <i>let</i> being swapped with <i>const</i>.</dd>
+          <dt><h5>Scope</h5></dt>
+          <dd>Scope is the extend of which a variable is visible to the program. All variable have a scope but not all variables
+have the same type of scope. we primarily work with 2 different types of scope. Function- and blocks scope.
+<b>> function scope: </b> Where the variable is visible inside of an entire function.
+<b>> block scope: </b>Where the variable is visible inside of the enclosing brackets it is inside. 
+
+<h5>Hoisting</h5>
+Hoisting is an important thing to be aware of when you talk about scope. Hoisting is the name of an feature in javascript That
+that declares every variable inside a given scope in the beginning of the function. It does this even if the variable first 
+is declared later down the line of the function. Example: 
+
+          function f() {
+            console.log(bar);  // undefined
+            var bar = 'abc';
+            console.log(bar);  // abc
+          }
+So the bar variable is declared already before the first console.log expression but returns <i>undefined</i> as there is no value to bar yet. </dd>
+          <dt>Objects</dt>
+          <dd></dd>
+          <dt>Arrays</dt>
+          <dd></dd>
+          <dt>Maps</dt>
+          <dd></dd>
+        </dl>
+    </pre>
+  </div>
 </body>
 </html>
