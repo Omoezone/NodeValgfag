@@ -56,3 +56,17 @@ PUT and PATCH:
  Mandatory: 
 
     
+Scripts kan også blive puttet i package.json. De tager et object. 
+
+"scripts": {
+    "scriptName" : "do something in terminal"
+}
+to run it do "npm run scriptName"
+
+"touch" create a new file
+"mkdir" create a new folder
+lsof -i med mere
+
+process.env.PORT
+
+Cross-env for npm
