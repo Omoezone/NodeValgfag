@@ -6,84 +6,263 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <title>Basic NodeJS</title>
+    <style>
+      .code{
+        font-family: monospace;
+        font-size: large;
+      }
+    </style>
 </head>
-<body style="background-color: rgba(36, 72, 88, 0.651);">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">Home</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="/basic">Basic NodeJS</a>
-            <a class="nav-link" href="/expressTerminal">Express & Terminal</a>
-            <a class="nav-link" href="/focusedTopic">Own topic</a>
-          </div>
-        </div>
-      </div>
-    </nav><br>
+<body style="background-color: rgba(198, 204, 206, 0.651); min-height: 75rem; padding-top: 4.5rem;">
+  
+<!--FIXED NAVBAR START-->
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/basic">Basic NodeJS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/express">Express</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/terminal">Terminal</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--FIXED NAVBAR END-->
   <h1 style="text-align: center;">BASIC PAGE</h1>
   <pre style="text-align: center;">This page is for the basic principles of NodeJS, such as arrays, JSON and variables
     The point is to give a simple and clear explaniation of the subjects with understandable examples.</pre><br>
-  <div style="margin: auto; width:75%; display:flex;">
-    <pre>
-        <dl>
-          <dt><h5>Variables</h5></dt><dd>Variables in NodeJS has the same functions as in most other languages. It is an container that hold values.
-We use 3 different kind of variables. <i>Var</i>, <i>let</i> and <i>const</i>. We will distinguish between mutable and imutalbe variables.
-A mutable variable is one, that can be modified after it is created, where an imutable can not. 
+    <div class="container">
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Variables
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div style="margin: auto; display:flex;">
+              <pre>
+                  <dl>
+                    <dt><h5>Variables</h5></dt><dd>Variables in NodeJS has the same functions as in most other languages. It is an container that hold values.
+          We use 3 different kind of variables. <i>Var</i>, <i>let</i> and <i>const</i>. We will distinguish between mutable and imutalbe variables.
+          A mutable variable is one, that can be modified after it is created, where an imutable can not. 
+          
+          <b>> var & let:</b> Both are mutable and is much alike with some differences. The main difference is the scope of the variables. 
+          Var has it scope to functions, while let has block scope ie. to enclosing brackets ("{}"). Example: 
+                    <pre class="code">
+                      function run() {
+                        var foo = "Foo";
+                        let bar = "Bar";
+                      
+                        console.log(foo, bar); // Foo Bar
+                        {
+                          var moo = "Mooo"
+                          let baz = "Bazz";
+                          console.log(moo, baz); // Mooo Bazz
+                        }
+                        console.log(moo); // Mooo
+                        console.log(baz); // ReferenceError
+                      }
+                      run();
+                    </pre>
+          Here is the var scoped to the entire function, where let is only usable inside the enclosing brackets. 
+          So the var in the middle ("Mooo") is used outside of the enclosing brackets as it log it in the end, with no problems
+          as it is still inside of the function <i>run()</i>, but it throws an error for the let, as the console log
+          for the let ("Bazz") is outside of the <i>scope</i> of the enclosing brackets ("{}").
+          
+          <b>> Const:</b> Is an imutable variable. Const works a lot like <i>let</i> which we have just talked about, with the 
+          exception that it cant be changed after it has been created. That it works like <i>let</i> means that it also has block scope.
+          Same example as above can be used with <i>let</i> being swapped with <i>const</i>.</dd>
+              </pre>      
+        </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Scope
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div style="margin: auto; display:flex;">
+              <pre>
+                <h5>Scope</h5>
+          Scope is the extend of which a variable is visible to the program. All variable have a scope but not all variables
+          have the same type of scope. we primarily work with 2 different types of scope. Function- and blocks scope.
+          <b>> function scope: </b> Where the variable is visible inside of an entire function.
+          <b>> block scope: </b>Where the variable is visible inside of the enclosing brackets it is inside.          
+             </pre>      
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Hoisting
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+          <pre>
+            <h5>Hoisting</h5>
+          Hoisting is an important thing to be aware of when you talk about scope. Hoisting is the name of an feature in javascript That
+          that declares every variable inside a given scope in the beginning of the function. It does this even if the variable first 
+          is declared later down the line of the function. Example: 
+          <pre class="code">
+                    function f() {
+                      console.log(bar);  // undefined
+                      var bar = 'abc';
+                      console.log(bar);  // abc
+                    }
+          </pre>
+          So the bar variable is declared already before the first console.log expression but returns <i>undefined</i> as there is no value to bar yet. </dd>          
+        </pre>      
+        </div>
+      </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Objects
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <pre>
+                <h5>Object</h5>
+          An object in NodeJS is a datatype and is one of the more complex data types in NodeJS. 
+          Object is a class that almost all objects inherits from. 
+          An Object is made up of key&Value pairs, that defines what the object is and what it does.
+          Example of a new object of a "car": 
+          <pre class="code">
+                let car = {type: "volvo", Horsepower: 2000, color:"Yellow"} 
+          </pre>
+          We have now created a new object called "car" with 3 key&value pairs that descripe the object. 
+          We can then interact with our object by making calls on the objects keys to acces its values.
+          <pre class="code"> 
+                car.type = "fiat";
+                car.color = "black";
+          </pre>
+          We changed the values of the car by calling the keys, that belonged to that value. 
 
-<b>> var & let:</b> Both are mutable and is much alike with some differences. The main difference is the scope of the variables. 
-Var has it scope to functions, while let has block scope ie. to enclosing brackets ("{}"). Example: 
+          we can also get the value of an object by calling the objects keys. 
+          <pre class="code"> 
+                const newType = car.type();
+          </pre>
+              </pre>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Arrays
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <pre>
+                  <h5>Arrays</h5>
+            An Array is a data container that is used to storage values in a systematic order.
+            We take values and input them into a list that is ordered by index numbers. 
+            So the first index (always called 0) is the first and the last index is array.length. 
+            We can store all values in an array, from simple values like 1, 5.2 and "HELLO" to more 
+            complex values like objects. To interact with the elements of an array, will we have to acces them 
+            via the index. Example:
+                <pre class="code">
+                  // Creating array with 3 elements
+                  let array = [1, 54, 1001]
 
-            function run() {
-              var foo = "Foo";
-              let bar = "Bar";
-            
-              console.log(foo, bar); // Foo Bar
-              {
-                var moo = "Mooo"
-                let baz = "Bazz";
-                console.log(moo, baz); // Mooo Bazz
-              }
-              console.log(moo); // Mooo
-              console.log(baz); // ReferenceError
-            }
-            run();
+                  // Getting the values of index 2
+                  const value = array[1];
 
-Here is the var scoped to the entire function, where let is only usable inside the enclosing brackets. 
-So the var in the middle ("Mooo") is used outside of the enclosing brackets as it log it in the end, with no problems
-as it is still inside of the function <i>run()</i>, but it throws an error for the let, as the console log
-for the let ("Bazz") is outside of the <i>scope</i> of the enclosing brackets ("{}").
+                  // Getting a specifik value in the array (returns 1 as that is the index where the value is)
+                  array.indexOf(54)
+                </pre>
+            There is a lot of different ways to work with arrays. We can also iterate through an array with maps.
+            Arrays can also be used as a simple database and a lot more.   
+                </pre>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  Map
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <pre>
+                    <h5>Map</h5>
+                    The map() creates a new array filled with the result of calling a function on every element of the calling array. 
+                    Example: 
+                    <pre class="code">
+                      const array = [1,2,3,4]; 
 
-<b>> Const:</b> Is an imutable variable. Const works a lot like <i>let</i> which we have just talked about, with the 
-exception that it cant be changed after it has been created. That it works like <i>let</i> means that it also has block scope.
-Same example as above can be used with <i>let</i> being swapped with <i>const</i>.</dd>
-          <dt><h5>Scope</h5></dt>
-          <dd>Scope is the extend of which a variable is visible to the program. All variable have a scope but not all variables
-have the same type of scope. we primarily work with 2 different types of scope. Function- and blocks scope.
-<b>> function scope: </b> Where the variable is visible inside of an entire function.
-<b>> block scope: </b>Where the variable is visible inside of the enclosing brackets it is inside. 
+                      const newMapArray = array.map(x => x + 1); 
+                      // Takes the array and for each element it add 1 and put it into the new array
 
-<h5>Hoisting</h5>
-Hoisting is an important thing to be aware of when you talk about scope. Hoisting is the name of an feature in javascript That
-that declares every variable inside a given scope in the beginning of the function. It does this even if the variable first 
-is declared later down the line of the function. Example: 
+                      console.log(newMapArray); // Output = [2,3,4,5]
+                    </pre>
+                    The important thing to remember, is that it takes data from one array, does something
+                    and creates a new array populated with the manipulated data. 
+                  </pre>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    Slice & splice
+                  </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <pre>
+                      <h5>Slice()</h5>
+                      Slice() is a function that can copy specifik parts of an array to a new array.
+                      We do that by using a start point and endpoint of elements that should be copied. 
+                      Example: 
+                      <pre class="code">
+                        const array = [1,2,3,4];
 
-          function f() {
-            console.log(bar);  // undefined
-            var bar = 'abc';
-            console.log(bar);  // abc
-          }
-So the bar variable is declared already before the first console.log expression but returns <i>undefined</i> as there is no value to bar yet. </dd>
-          <dt>Objects</dt>
-          <dd></dd>
-          <dt>Arrays</dt>
-          <dd></dd>
-          <dt>Maps</dt>
-          <dd></dd>
-        </dl>
+                        const newArray = array.splice(0,3); 
+                        // Start from index 0 and goes to index 2 as the end point is exluding.
+
+                        console.log(newArray); // output = []1,2,3]
+                      </pre>
+                      <h5>Splice()</h5>
+                      Splice is used to insert values into an array on specifik index.
+                      Example: 
+                      <pre class="code">
+                        const array = ["tomato", "cucumber", "rocket"];
+
+                        array.splice(2, 0, "hamburger", "soda", "pizza"); 
+                        // insert the values from index 2 of the array. 
+                        // The 0 means that we dont want to delete anything before we insert values
+
+                        console.log(array); // ["tomato", "cucumber", "hamburger", "soda", "pizza", "rocket"]
+                      </pre>
+                    </pre>
+                  </div>
+                </div>
+      </div>
+    </div>
     </pre>
   </div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 </html>

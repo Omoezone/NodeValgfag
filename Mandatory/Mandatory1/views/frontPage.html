@@ -5,35 +5,42 @@
         <meta charset="UTF-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     </head>
-    <body style="background-color: rgba(36, 72, 88, 0.651);">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="/">Home</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="/basic">Basic NodeJS</a>
-                  <a class="nav-link" href="/expressTerminal">Express & Terminal</a>
-                  <a class="nav-link" href="/focusedTopic">Own topic</a>
-                </div>
-              </div>
-            </div>
-          </nav><br>
-          <h1 style="text-align: center;">Frontpage of mandatory 1, NodeJS</h1>
-          <pre style="text-align: center;">TLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra mattis laoreet. 
-Nunc bibendum sapien vel fermentum laoreet. Aliquam eget viverra sapien. 
-Aenean congue fringilla ex ac ullamcorper. Morbi scelerisque imperdiet justo, et maximus purus cursus ut. 
-Sed mattis eros condimentum dignissim condimentum. Integer tempus semper tortor, nec finibus orci mattis in. 
-Phasellus tempor fermentum diam, in euismod ex scelerisque ac. Nam ultrices ligula risus, in blandit lectus pharetra a. 
-Aliquam gravida enim quis sagittis volutpat. Duis convallis ipsum id blandit pellentesque.
+    <body style="background-color: rgba(198, 204, 206, 0.651); min-height: 75rem; padding-top: 4.5rem;">
+<!--FIXED NAVBAR START-->
 
-Donec pulvinar non est sit amet lobortis. Duis non aliquam nisl. Maecenas tincidunt, 
-dolor ac condimentum porta, ante nisl tincidunt augue, et cursus odio velit ut nibh. 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet lacus molestie, fringilla leo vitae, feugiat turpis. 
-Phasellus in commodo est, in vestibulum quam. Ut commodo sapien eu libero venenatis sollicitudin. 
-Sed ac tincidunt turpis. Proin id ante tellus. Aenean in aliquam eros, a rhoncus massa.</pre><br>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/basic">Basic NodeJS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/express">Express</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/terminal">Terminal</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--FIXED NAVBAR END-->
+          <h1 style="text-align: center;">Frontpage of mandatory 1, NodeJS</h1>
+          <pre style="text-align: center;">
+  Welcome to the frontpage of my first Mandatory project in NodeJS. I choose to to split the project up in 3 parts. 
+  The basic concepts of NodeJS, such as variables, arrays, objects and more. 
+  Then there is the page where i focus on express, with the setup and usage. 
+  At last will we go through how we work with the terminal, with npm, git and more.
+  You can navigate around the pages with the navigation bar or the cards on the frontpage (this)
+          
+  Project made by William Omø
+</pre><br>
 
 <div style="margin: auto; width:50%; border: 3px solid green; display:flex;">
   <div class="card" style="width: 18rem; float:left; margin:2rem">
@@ -45,19 +52,19 @@ Sed ac tincidunt turpis. Proin id ante tellus. Aenean in aliquam eros, a rhoncus
     </div>
   </div>
   <div class="card" style="width: 18rem;float:left; margin:2rem">
-    <img src="../visuals/placeholderPic.jpg" class="card-img-top" alt="Cant find the picture location">
+    <img src="../visuals/placeholderPic.jpg" widht="10" height="10" class="card-img-top" alt="Cant find the picture location">
     <div class="card-body">
       <h5 class="card-title">Express and terminal</h5>
       <p class="card-text">This page if for using express and the commands we are using in the terminal, such as <i>git</i>, <i>node(mon)</i> and <i>npm</i></p>
-      <a href="/expressTerminal" class="btn btn-outline-dark">Go to express & terminal page</a>
+      <a href="/express" class="btn btn-outline-dark">Go to express page</a>
     </div>
   </div>
   <div class="card" style="width: 18rem;float:left; margin:2rem">
     <img src="../visuals/placeholderPic.jpg" class="card-img-top" alt="Cant find the picture location">
     <div class="card-body">
-      <h5 class="card-title">Own topic</h5>
+      <h5 class="card-title">Terminal</h5>
       <p class="card-text">This page is for the topic I chose to learn more about</p>
-      <a href="/focusedTopic" class="btn btn-outline-dark">Go to own topic page</a>
+      <a href="/terminal" class="btn btn-outline-dark">Go to terminal page</a>
     </div>
   </div>
 </div>

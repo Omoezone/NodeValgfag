@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body style="background-color: rgba(198, 204, 206, 0.651); min-height: 75rem; padding-top: 4.5rem;">
+<!--FIXED NAVBAR START-->
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/basic">Basic NodeJS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/express">Express</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/terminal">Terminal</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--FIXED NAVBAR END-->
+    <h1 style="text-align: center;">Terminal</h1>
+    <pre style="text-align: center;">
+We will on this page demonstrate how we work with the <i>terminal</i>
+as we use the different tools in our toolbelts, such as <b>git commands</b> and <b>npm</b>.</pre>
+    <div class="container">
+    <div style="margin: auto; display:flex;">
+      <pre style=>
+      <dl>
+          <dt>Git commands</dt>
+          <dd>When we are coding and working with IDE's, will we often use github as a file manager and sharing tool. 
+  To do this will we need understand the different commands we have to use. we do this in a few steps.
+  All steps need to begin with keyword "git".
+  1. We need to save the files that we need to be sent to github.                  
+      <b>> git add -A</b> (The "A" says 'save everything in the project'. it can be more specifik too)
+  2. We need to pack the files in a commit that is ready to be sent to our github. 
+      <b>> git commit -m "<i>Here we put commit message</i>"</b>
+  3. We then need to send the files to our github and finalize the commit, with a push. 
+      <b>> git push</b></dd>
+          <dt>Node & Nodemon</dt>
+          <dd>Node and nodemon is terminal commands that we use to run our program in its current state. 
+  It is these commands that trigger the <i>listen</i> function in our program. 
+  The <b>node</b> command runs the program once, while <b>nodemon</b> keeps restarting the program each time we change something i our project.
+  Node is preinstalled and a part of the basic nodeJS framework, where we need to install <b>nodemon</b> ourself with a <b>npm</b> command. 
+  
+  Usage: 
+  We call either <b>node</b> or <b>nodemon</b> on the file we want to run. We made an file called <i>app.js</i> earlier which we
+  now want to run with the help of the terminal. We ensure that we are on the correct path (the folder where we saved <i>app.js</i>).
+  Then we simply write either <b>node</b> or <b>nodemon</b> followed by the name of the file we want to run, like this:
+      <b>> PS C:\Users\xxx\xxx\NodeJS\NodeValgfag\Mandatory\Mandatory1> nodemon.cmd app.js</b>
+      or
+      <b>> PS C:\Users\xxx\xxx\NodeJS\NodeValgfag\Mandatory\Mandatory1> node app.js</b>
+  We will sometimes have to put <i>.cmd</i> after node or nodemon to be able to use it. That is a path problem which is easily fixed this way. </dd>
+          <dt>npm</dt>
+          <dd>npm (Node Package Manager) is the default package manager for javascript. It is an online database of packages, that we
+  (the users) can access and use. This online database is called the <b>npm registry</b>. We access the npm registry with our client in the terminal
+  and install the given packages we need and/or want. We can find all sorts of different packages on the npm website. </dd>
+      </dl>
+  </pre>
+  </div>
+</div>
+</body>
+</html>
