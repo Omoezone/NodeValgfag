@@ -3,6 +3,7 @@
         "devMode": "SET PORT=3000 && nodemon.cmd app.js"
     },
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "nodemon": "^2.0.7"
     }
 }

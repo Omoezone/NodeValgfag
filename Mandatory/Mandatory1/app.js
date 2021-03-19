@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+app.use(express.static('images'))
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + '/views/frontPage.html');
@@ -19,7 +20,7 @@ app.get("/terminal", (req, res) =>{
 
 const port = process.env.PORT || 8080;
 
-app.listen(8080, (error) => {
+app.listen(port, (error) => {
     if(error){
         console.log("The program experienced an error" + error);
     }else {

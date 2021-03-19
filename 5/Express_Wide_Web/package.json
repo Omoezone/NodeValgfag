@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "nodemonS":"nodemon.cmd app.js",
+        "nodemonS": "nodemon.cmd app.js",
         "start-dev": "SET PORT=3000 && nodemon.cmd app.js"
     },
     "dependencies": {
