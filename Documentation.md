@@ -40,13 +40,17 @@ Array:
 
 
 -----
-CALLBACKS
+Arrow functions
 
 Errors er objects¨
 
 Undefined er ikke et true value, ligesom false, 0 osv.
 
 const value = require("./filenameOfJSON"); // If no ./ it will look in node_modules
+
+app.use(express.static('folderName')) // Bruges til at definere en folder som værende static, hvilket betyder at 
+// clienten har adgang til at se indholder i den mappe, i modsætning til at det kun vil være serveren der skal have adgang til en gien
+// folder. Hvis ikke clienten har adgang til en folder, vil indholdet ikke kunne blive vist på en hjemmeside. 
 
 PUT and PATCH: 
     put replaces the entire resource
