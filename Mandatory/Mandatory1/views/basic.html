@@ -16,7 +16,6 @@
 <body style="background-color: rgba(198, 204, 206, 0.651); min-height: 75rem; padding-top: 4.5rem;">
   
 <!--FIXED NAVBAR START-->
-
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">Home</a>
@@ -42,7 +41,9 @@
 <!--FIXED NAVBAR END-->
   <h1 style="text-align: center;">BASIC PAGE</h1>
   <pre style="text-align: center;">This page is for the basic principles of NodeJS, such as arrays, JSON and variables
-    The point is to give a simple and clear explaniation of the subjects with understandable examples.</pre><br>
+    The point is to give a simple and clear explaniation of the subjects with understandable examples.
+    Some things are not on here as it is very simple and almost completely the same between languange, like for loops,
+    variable declarations and such.</pre><br>
     <div class="container">
     <div class="accordion" id="accordionExample">
       <div class="accordion-item">
@@ -55,8 +56,8 @@
           <div class="accordion-body">
             <div style="margin: auto; display:flex;">
               <pre>
-                  <dl>
-                    <dt><h5>Variables</h5></dt><dd>Variables in NodeJS has the same functions as in most other languages. It is an container that hold values.
+                    <h5>Variables</h5>
+          Variables in NodeJS has the same functions as in most other languages. It is an container that hold values.
           We use 3 different kind of variables. <i>Var</i>, <i>let</i> and <i>const</i>. We will distinguish between mutable and imutalbe variables.
           A mutable variable is one, that can be modified after it is created, where an imutable can not. 
           
@@ -85,7 +86,7 @@
           
           <b>> Const:</b> Is an imutable variable. Const works a lot like <i>let</i> which we have just talked about, with the 
           exception that it cant be changed after it has been created. That it works like <i>let</i> means that it also has block scope.
-          Same example as above can be used with <i>let</i> being swapped with <i>const</i>.</dd>
+          Same example as above can be used with <i>let</i> being swapped with <i>const</i>.
               </pre>      
         </div>
         </div>
@@ -316,7 +317,7 @@
           </div>
         </div>
 </div>
-<div class="accordion-item">
+  <div class="accordion-item">
   <h2 class="accordion-header" id="headingNine">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
       <strong>Client-Server-Model</strong>
@@ -343,6 +344,48 @@
             app.use(express.static('views'));
           </pre>
           If we didnt do this, would we experience difficulties with showing images and/or external css files on the webpage. 
+      </pre>
+    </div>
+  </div>
+</div>
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingTen">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+      <strong>Type coercion & Strict mode</strong>
+    </button>
+  </h2>
+  <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+      <pre>
+        <h5>Type coercion</h5>
+          Type coercion is when you translate or convert one type of data to another type of data. 
+          An example would be if you had a input from a user, which would be a string and you need 
+          to translate it into a number. 
+          <pre class="code">
+              let numberString = "123";
+              let stringToNumber = Number(numberString);
+          </pre>
+          As long as the input actually is a valid number type and not fx a string type. 
+          <h5>Strict mode</h5>
+          Strict mode is an expression you can use in your javascript programs, to enable the whole file 
+          or just seperate parts of it like a function, to run in a stricter version. What that primarily 
+          means is that you no longer can create variables without initialisation (var, let, const).
+
+          One of the main reasons to you strict mode is for security. Not defining when an variable is
+          initialised is not only bad syntax but also more prone to errors. Without strict mode enabled
+          will things like mistyping make a high risk of errors. Examples: 
+          <pre class="code">
+            // Without strict mode
+            x = 3.14;       // This will not cause an error.
+            myFunction();
+
+            function myFunction() {
+              "use strict"; // How to define that you want to use strict mode
+              y = 3.14;   // This will cause an error because we use strict mode but dont define variable.
+            }
+          </pre>
+           There are a lot smaller but essential rules that strict mode enforces, which we will not go 
+           through here as it is an easy google seach away. 
       </pre>
     </div>
   </div>
