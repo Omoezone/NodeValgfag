@@ -76,4 +76,4 @@ process.env.PORT
 Cross-env for npm
 
 
-CHANGE FOR HEROKU
+REMOVED CHANGE FOR HEROKU
