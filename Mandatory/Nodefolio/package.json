@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "express": "4.17.1"
+  },
+  "name": "nodefolio",
+  "version": "0.0.1",
+  "description": "This is my personal portfolio written in NodeJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devMode": "SET PORT=3000 && nodemon.cmd app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Omoezone/NodeValgfag.git"
+  },
+  "keywords": [
+    "portfolio",
+    "personal",
+    "websit",
+    "kea"
+  ],
+  "author": "WO",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Omoezone/NodeValgfag/issues"
+  },
+  "homepage": "https://github.com/Omoezone/NodeValgfag#readme"
+}

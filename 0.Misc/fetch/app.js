@@ -1,3 +1,4 @@
+const { response } = require("express");
 const express = require("express");
 const fs = require("fs/promises")
 const fetch = require("node-fetch");  
@@ -6,6 +7,12 @@ const app = express();
 app.get("/", (req,res)=>{
     res.sendFile(__dirname+"/public/index.html")
 });
+
+app.get("/proxy1", (req,res)=>{
+    fetch("https://google.dk")
+    .then(res => res.textConverted())
+    .then(body => res.send(body))
+})
 
 app.get("/proxy", (req,res) =>{
     fetch("https://google.dk") // Fetch html data (text) from google.dk
