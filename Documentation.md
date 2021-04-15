@@ -71,6 +71,9 @@ to run it do "npm run scriptName"
 "mkdir" create a new folder
 lsof -i med mere
 
-process.env.PORT
+process.env.PORT    
 
 Cross-env for npm
+
+
+CHANGE FOR HEROKU
