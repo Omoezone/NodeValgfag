@@ -77,3 +77,8 @@ Cross-env for npm
 
 
 CHANGE FOR HEROKU
+
+module.export = { Data indsættes her}
+
+Nodemailer
+SCEMAs
