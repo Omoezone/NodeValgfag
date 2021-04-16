@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-router.get("/information", (req,res)=>{
+router.get("/api/projects", (req,res)=>{
     res.send({texting:"information text"})
 })
 const information = {

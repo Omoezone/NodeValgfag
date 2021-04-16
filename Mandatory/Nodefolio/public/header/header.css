@@ -9,3 +9,7 @@
 #main-content {
     min-height: calc(100vh - 120px);   
 }
+#headerBox{
+    background-color: aqua;
+    border-radius: 10px;
+}
