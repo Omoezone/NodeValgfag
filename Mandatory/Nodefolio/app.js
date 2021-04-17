@@ -1,9 +1,11 @@
 const express = require("express");
 const app = express();
+const nodemailer = require("nodemailer");
 app.use(express.static('public'));
+app.use(express.json());
 
 const projectsRoute = require("./routes/projects.js")
-console.log(projectsRoute);
+//cconsole.log(projectsRoute); // TODO REMOVE SOON
 app.use(projectsRoute.router);
 
 const fs = require("fs");
@@ -18,7 +20,6 @@ const skillspage = fs.readFileSync(__dirname + "/public/skills/skills.html", "ut
 const educationpage = fs.readFileSync(__dirname + "/public/education/education.html", "utf-8");                     //education
 const recommendationspage = fs.readFileSync(__dirname + "/public/recommendations/recommendations.html", "utf-8");   //recommendations
 
-
 app.get("/", (req, res) => {
     res.send(header + frontpage + footer);
 });
@@ -30,7 +31,9 @@ app.get("/projects", (req,res) => {
 app.get("/contact", (req,res) => {
     res.send(header + contactpage + footer)
 })
-
+app.post("/send",(req,res) => {
+    console.log(req.body)
+})
 app.get("/skills", (req,res) => {
     res.send(header + skillspage + footer)
 })
@@ -43,7 +46,7 @@ app.get("/recommendations", (req,res) => {
 })
 
 const port = process.env.PORT;
-const server = app.listen(port, (error) => {
+const server = app.listen(8080, (error) => {
     if(error){
         console.log("The program experienced an error" + error);
     }else {
