@@ -3,10 +3,13 @@ const app = express();
 const nodemailer = require("nodemailer");
 app.use(express.static('public'));
 app.use(express.json());
+app.use(express.urlencoded());
 
 const projectsRoute = require("./routes/projects.js")
-//cconsole.log(projectsRoute); // TODO REMOVE SOON
+const sendRoute = require("./routes/send.js")
+
 app.use(projectsRoute.router);
+app.use(sendRoute.router);
 
 const fs = require("fs");
 
@@ -31,9 +34,7 @@ app.get("/projects", (req,res) => {
 app.get("/contact", (req,res) => {
     res.send(header + contactpage + footer)
 })
-app.post("/send",(req,res) => {
-    console.log(req.body)
-})
+
 app.get("/skills", (req,res) => {
     res.send(header + skillspage + footer)
 })
