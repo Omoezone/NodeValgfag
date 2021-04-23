@@ -1,0 +1,28 @@
+Relational database
+MySQL
+PostgreSQL
+MariaDB
+MsSQL
+ORACLE
+Sqlite
+
+(In-memory db)
+H2
+---------
+NoSQL
+
+
+---------
+Document:
+RavenDB
+MongoDB
+Firebase
+---------
+Object:
+Realm
+
+---------
+Graph:
+Neo4J
+
+---------

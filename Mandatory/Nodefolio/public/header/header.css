@@ -1,15 +1,34 @@
 #nav-logo {
     width: 60px;
 }
-
 #nav-right-menu {
     float: right;
 }
-
 #main-content {
     min-height: calc(100vh - 120px);   
 }
 #navbar-style{
     background-color: gray;
     margin-bottom: 25px;
+}
+a:hover {
+    background-color: #4CAF50;
+    border-radius: 10px;
+}
+#eduBack{
+    background-color: rgb(163, 193, 238);
+    padding:5px 10px 10px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.textCenter{
+    text-align: center;
+}
+h1,h2,h3,h4,h5,h6{
+    color:rgb(24, 68, 134);
+}
+label{
+    color:rgb(24, 68, 134);
+    font-style:oblique;
+    font-weight: 600;
 }

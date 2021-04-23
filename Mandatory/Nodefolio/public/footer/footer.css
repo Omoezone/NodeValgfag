@@ -1,4 +1,5 @@
 #footer-copyright {
     display: flex;
-    justify-content: center;
+    float:left;
+    margin-right: 25px;
 }

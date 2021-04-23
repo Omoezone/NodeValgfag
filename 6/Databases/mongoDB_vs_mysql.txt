@@ -1,0 +1,22 @@
+MySQL: Table 
+MongdoDB: Collection
+[
+    {
+        key:212
+    },
+    {
+        key:213
+        anotherkey: "sdad"
+    }
+]
+
+mysql: 
+----------
+great for data that needs to aher to a rigid schema, structured data. 
+great for when the requirements are not prone to change
+
+mongoDB: 
+----------
+flexible -> rapid prototyping
+great for javascript as a mongo object is close to an js object
+puts a lot of pressure on the developer being good

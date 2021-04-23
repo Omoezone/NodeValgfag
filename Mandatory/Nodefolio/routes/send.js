@@ -8,12 +8,12 @@ router.post("/send",(req,res) => {
     <h1>Someone wants to contact you</h1>
     <h3>Contact informations:</h3>
     <pre>
-        <ul>
-            <il>Name: ${req.body.name}</il>
-            <il>Email: ${req.body.email}</il>
-            <il>Company: ${req.body.company}</il>
-            <il>Subject: ${req.body.subject}</il>
-        </ul>
+    <ul>
+        <il>Name: ${req.body.name}</il>
+        <il>Email: ${req.body.email}</il>
+        <il>Company: ${req.body.company}</il>
+        <il>Subject: ${req.body.subject}</il>
+    </ul>
     </pre>
     <h3>Message</h3>
     <p>${req.body.textField}</p>
