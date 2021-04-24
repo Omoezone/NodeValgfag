@@ -16,7 +16,7 @@ router.post("/send",(req,res) => {
     </ul>
     </pre>
     <h3>Message</h3>
-    <p>${req.body.textField}</p>
+    <p>${req.body.message}</p>
     `;
     main();
     async function main() {
